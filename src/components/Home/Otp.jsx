@@ -196,8 +196,8 @@ const Otp = () => {
                     <div
                       id="timer"
                       style={{
-                        float: 'right',
-                        marginTop: "36px",
+                        float: "right",
+                        marginTop: "20px",
                         fontSize: "20px",
                       }}
                     >
@@ -231,12 +231,24 @@ const Otp = () => {
                     </Typography>
                   )}
 
+                  <Typography
+                    sx={{
+                      marginTop: "20px",
+                      fontWeight: "500",
+                      textAlign: "left",
+                    }}
+                    variant="body2"
+                  >
+                    Didn't receive a code?{" "}
+                    <span style={{ textDecoration: "underline" }}>RESEND</span>{" "}
+                  </Typography>
+
                   <Button
                     sx={{
                       alignItems: "left",
                       float: "left",
                       marginTop: "23px",
-                      textTransform: 'none'
+                      textTransform: "none",
                     }}
                     type="submit"
                     variant="outlined"
