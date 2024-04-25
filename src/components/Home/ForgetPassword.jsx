@@ -120,6 +120,7 @@ function ForgetPassword() {
                       marginTop: "20px",
                       height: "55px",
                       float: "left",
+                      textTransform: 'none'
                     }}
                   >
                     Continue

@@ -198,6 +198,7 @@ const Registration = () => {
                       height: "55px",
                       backgroundColor: "#d2d2d2",
                       color: "gray",
+                      textTransform: 'none'
                     }}
                   >
                     Continue

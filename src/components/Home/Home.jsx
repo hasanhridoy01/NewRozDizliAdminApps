@@ -170,7 +170,7 @@ const Home = () => {
                     color="primary"
                     type="submit"
                     variant="contained"
-                    sx={{ width: "400px", marginTop: "20px", height: "55px" }}
+                    sx={{ width: "400px", marginTop: "20px", height: "55px", textTransform: 'none' }}
                   >
                     <Typography variant="h6">SIGN IN</Typography>
                   </Button>

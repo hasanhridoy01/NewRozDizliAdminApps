@@ -236,6 +236,7 @@ const Otp = () => {
                       alignItems: "left",
                       float: "left",
                       marginTop: "23px",
+                      textTransform: 'none'
                     }}
                     type="submit"
                     variant="outlined"
