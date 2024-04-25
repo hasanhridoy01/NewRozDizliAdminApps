@@ -47,10 +47,10 @@ const Home = () => {
   //Handle Forget Password.....................!
   const handleForgetPassword = (e) => {
     e.preventDefault();
-    
+
     //navigate to another page....................!
-    navigate('/forgetPassword');
-  }
+    navigate("/forgetPassword");
+  };
 
   return (
     <>
@@ -170,9 +170,15 @@ const Home = () => {
                     color="primary"
                     type="submit"
                     variant="contained"
-                    sx={{ width: "400px", marginTop: "20px", height: "55px", textTransform: 'none' }}
+                    sx={{
+                      width: "400px",
+                      marginTop: "20px",
+                      height: "50px",
+                      textTransform: "none",
+                      fontSize: '18px'
+                    }}
                   >
-                    <Typography variant="h6">SIGN IN</Typography>
+                    Sign In
                   </Button>
                 </div>
               </Form>
