@@ -1,0 +1,15 @@
+.inputStyleTwo {
+  height: 55px;
+  width: 45px;
+  background-color: #fafafa;
+  border-radius: 5px;
+  font-size: 25px;
+}
+.inputStyleTwo:focus {
+  outline: none;
+  border: none;
+}
+.customOtpInput {
+  width: 520px; 
+  height: 50px; 
+}
