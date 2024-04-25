@@ -197,7 +197,7 @@ const Otp = () => {
                       id="timer"
                       style={{
                         float: "right",
-                        marginTop: "20px",
+                        marginTop: "19px",
                         fontSize: "20px",
                       }}
                     >
