@@ -63,7 +63,7 @@ function ForgetPassword() {
                   <Typography
                     variant="h6"
                     gutterBottom
-                    style={{ display: "flex", alignItems: "center" }}
+                    style={{ display: "flex", alignItems: "center", cursor: 'pointer' }}
                   >
                     <ArrowBackIcon style={{ marginRight: "8px" }} />
                     Forget Password
