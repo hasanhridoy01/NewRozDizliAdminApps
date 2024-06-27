@@ -23,7 +23,7 @@ const Otp = () => {
 
   // Function to update the timer display
   function updateTimer() {
-    setSeconds((prevSeconds) => prevSeconds - 1);
+    setSeconds((prevSeconds) => (prevSeconds > 0 ? prevSeconds - 1 : 0));
   }
 
   // Update the timer every second (1000 milliseconds)
@@ -35,6 +35,9 @@ const Otp = () => {
   }, []);
 
   useEffect(() => {
+    setSeconds(10);
+    setIsVisible(true);
+
     const timeoutId = setTimeout(() => {
       setIsVisible(false);
     }, 10000);
@@ -42,7 +45,7 @@ const Otp = () => {
     return () => {
       clearTimeout(timeoutId);
     };
-  }, []);
+  }, [otp]);
 
   // Format the time display
   const minutes = Math.floor(seconds / 10);
@@ -156,7 +159,8 @@ const Otp = () => {
                       marginTop: "7px",
                       fontWeight: "600",
                       textAlign: "left",
-                      color: "#00a100",
+                      color: "#06b6d4",
+                      fontSize: "16px",
                     }}
                   >
                     {params.email}
@@ -199,7 +203,10 @@ const Otp = () => {
                         float: "right",
                         marginTop: "19px",
                         fontSize: "20px",
-                      }}
+                        color: '#06b6d4',
+                        fontWeight: '500',
+                        WebkitFontSmoothing: 'antialiased'
+                      }}                      
                     >
                       {timeString}
                     </div>
@@ -240,19 +247,27 @@ const Otp = () => {
                     variant="body2"
                   >
                     Did not receive a code?{" "}
-                    <span style={{ textDecoration: "underline" }}>RESEND</span>{" "}
+                    {
+                      !isVisible && <span style={{ textDecoration: "underline", color: "#06b6d4", cursor: 'pointer'  }}>RESEND</span>
+                    }
+                    {" "}
                   </Typography>
 
                   <Button
                     sx={{
-                      alignItems: "left",
+                      display: "flex",
+                      alignItems: "center",
                       float: "left",
                       marginTop: "23px",
                       textTransform: "none",
+                      color: isVisible ? "#06b6d4" : "#fff",
+                      backgroundColor: isVisible ? "transparent" : "#06b6d4",
+                      borderColor: isVisible ? "#06b6d4" : "transparent"
                     }}
                     type="submit"
-                    variant="outlined"
+                    variant={isVisible ? "outlined" : "contained"}
                     size="large"
+                    disabled={!isVisible}
                   >
                     Verified
                   </Button>
