@@ -38,7 +38,7 @@ const Otp = () => {
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      setIsVisible(false); // Assuming setIsVisible is a state setter function
+      setIsVisible(false); 
     }, 10000);
 
     return () => {
