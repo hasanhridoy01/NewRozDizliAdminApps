@@ -47,7 +47,7 @@ const Otp = () => {
     };
   }, [otp]);
 
-  // Format the time display
+  // Format the time display...........................!
   const minutes = Math.floor(seconds / 10);
   const remainingSeconds = seconds % 10;
   const timeString = `${minutes}:${String(remainingSeconds).padStart(2, "0")}`;
