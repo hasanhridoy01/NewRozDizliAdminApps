@@ -106,7 +106,7 @@ const Otp = () => {
         >
           <Card
             sx={{
-              height: "410px",
+              height: "420px",
               width: "350px",
               padding: "50px",
               borderRadius: "15px",
@@ -117,7 +117,7 @@ const Otp = () => {
                 style={{
                   justifyContent: "left",
                   alignItems: "center",
-                  marginTop: "30px",
+                  marginTop: "10px",
                 }}
               >
                 <Typography
