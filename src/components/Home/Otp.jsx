@@ -15,7 +15,7 @@ const Otp = () => {
   const params = useParams();
   const [isVisible, setIsVisible] = useState(true);
   const [isValidate, setIsValidate] = useState(true);
-  const [success, setSuccess] = useState(true);
+  // const [success, setSuccess] = useState(true);
   const navigate = useNavigate();
   const [otp, setOtp] = useState("");
 
@@ -237,7 +237,7 @@ const Otp = () => {
                     }}
                     variant="body2"
                   >
-                    Didn't receive a code?{" "}
+                    Did not receive a code?{" "}
                     <span style={{ textDecoration: "underline" }}>RESEND</span>{" "}
                   </Typography>
 
