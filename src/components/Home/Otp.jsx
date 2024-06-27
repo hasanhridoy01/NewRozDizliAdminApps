@@ -36,7 +36,7 @@ const Otp = () => {
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      setIsVisible(false); 
+      setIsVisible(false);
     }, 10000);
 
     return () => {
@@ -154,8 +154,9 @@ const Otp = () => {
                     name="email"
                     sx={{
                       marginTop: "7px",
-                      fontWeight: "500",
+                      fontWeight: "600",
                       textAlign: "left",
+                      color: "#00a100",
                     }}
                   >
                     {params.email}
@@ -180,12 +181,13 @@ const Otp = () => {
                           background: "#fafafa",
                           borderRadius: "5px",
                           border:
-                            isVisible & isValidate
+                            isVisible && isValidate
                               ? "#fafafa"
                               : "2px solid red",
                           backgroundColor:
-                            isVisible & isValidate ? "#fafafa" : "#FFECEC",
+                            isVisible && isValidate ? "#fafafa" : "#FFECEC",
                         }}
+                        disabled={!isVisible}
                       />
                     )}
                   />
