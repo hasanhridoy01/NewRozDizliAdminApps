@@ -101,7 +101,7 @@ const Otp = () => {
             alignItems: "center",
             justifyContent: "center",
             margin: 0,
-            marginTop: "100px",
+            marginTop: "75px",
           }}
         >
           <Card
