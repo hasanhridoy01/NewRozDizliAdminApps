@@ -65,10 +65,10 @@ const Home = () => {
             marginTop: "100px",
           }}
         >
-          <Card sx={{ height: "530px", width: "500px" }}>
+          <Card sx={{ height: "540px", width: "500px" }}>
             <CardContent>
               <Form onSubmit={handleFormSubmit} id="FormId">
-                <div className="" style={{ margin: "auto" }}>
+                <div className="" style={{ margin: "auto", display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
                   <Typography
                     variant="h4"
                     gutterBottom
@@ -77,6 +77,7 @@ const Home = () => {
                       color: "#002B49",
                       fontWeight: "700",
                       marginBottom: "30px",
+                      textAlign: 'center'
                     }}
                   >
                     عطيني
@@ -90,6 +91,7 @@ const Home = () => {
                       color: "#002B49",
                       fontWeight: "500",
                       marginBottom: "50px",
+                      textAlign: 'center'
                     }}
                   >
                     Login
@@ -139,15 +141,15 @@ const Home = () => {
                     className=""
                     style={{
                       display: "flex",
-                      justifyContent: "space-around",
                       alignItems: "center",
+                      justifyContent: 'space-between',
                       marginTop: "26px",
+                      width: '85%'
                     }}
                   >
                     <FormControlLabel
                       control={<Checkbox />}
                       label="Remember Me"
-                      sx={{ marginRight: "56px" }}
                     />
                     <Typography
                       variant="body1"
