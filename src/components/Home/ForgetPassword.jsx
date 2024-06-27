@@ -9,11 +9,11 @@ import {
 } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import { Form, useNavigate, useParams } from "react-router-dom";
+import { Form, useNavigate } from "react-router-dom";
 
 function ForgetPassword() {
   const navigate = useNavigate();
-  const params = useParams();
+  // const params = useParams();
 
   //handleForm.......................!
   const handleForm = (e) => {

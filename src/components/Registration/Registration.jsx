@@ -35,6 +35,7 @@ const Registration = () => {
     const password = e.target.password.value;
     const resetPassword = e.target.resetPassword.value;
 
+    //Password Validation.....................!
     const specialCharacterRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
     const containsUppercase = /[A-Z]/.test(password);
     const containsLowercase = /[a-z]/.test(password);
