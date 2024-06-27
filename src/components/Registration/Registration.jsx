@@ -16,6 +16,8 @@ import { useState } from "react";
 const Registration = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showPasswordTwo, setShowPasswordTwo] = useState(false);
+
+  //Navigate On Another Page................!
   const navigate = useNavigate();
 
   //Handle Password Methods.................!
@@ -43,16 +45,18 @@ const Registration = () => {
 
     //password validation................!
     if (password == resetPassword) {
-      if (
-        password.length >= 8 &&
-        specialCharacterRegex.test(password) &&
-        containsUppercase &&
-        containsLowercase &&
-        containsNumber
-      ) {
-        navigate("/");
+      if (password.length < 8) {
+        alert("Password must be at least 8 characters in length");
+      } else if (!specialCharacterRegex.test(password)) {
+        alert("Password must contain at least one special character");
+      } else if (!containsUppercase) {
+        alert("Password must contain at least one uppercase letter");
+      } else if (!containsLowercase) {
+        alert("Password must contain at least one lowercase letter");
+      } else if (!containsNumber) {
+        alert("Password must contain at least one number");
       } else {
-        alert("please minimum 8 characters in length");
+        navigate("/");
       }
     } else {
       alert("password and resetPassword not match");
@@ -197,7 +201,7 @@ const Registration = () => {
                       height: "55px",
                       backgroundColor: "#d2d2d2",
                       color: "gray",
-                      textTransform: 'none'
+                      textTransform: "none",
                     }}
                   >
                     Continue
