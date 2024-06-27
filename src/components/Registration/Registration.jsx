@@ -46,15 +46,23 @@ const Registration = () => {
     //password validation................!
     if (password == resetPassword) {
       if (password.length < 8) {
-        alert("Password must be at least 8 characters in length");
+        alert("Your password must be at least 8 characters long.");
       } else if (!specialCharacterRegex.test(password)) {
-        alert("Password must contain at least one special character");
+        alert(
+          "Your password must include at least one special character (e.g., !, @, #)."
+        );
       } else if (!containsUppercase) {
-        alert("Password must contain at least one uppercase letter");
+        alert(
+          "Your password must include at least one uppercase letter (e.g., A, B, C)."
+        );
       } else if (!containsLowercase) {
-        alert("Password must contain at least one lowercase letter");
+        alert(
+          "Your password must include at least one lowercase letter (e.g., a, b, c)."
+        );
       } else if (!containsNumber) {
-        alert("Password must contain at least one number");
+        alert(
+          "Your password must include at least one number (e.g., 1, 2, 3)."
+        );
       } else {
         navigate("/");
       }
