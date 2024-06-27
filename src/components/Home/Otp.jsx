@@ -123,7 +123,7 @@ const Otp = () => {
                 <Typography
                   variant="h6"
                   gutterBottom
-                  style={{ display: "flex", alignItems: "center" }}
+                  style={{ display: "flex", alignItems: "center", cursor: 'pointer' }}
                 >
                   <ArrowBackIcon style={{ marginRight: "8px" }} />
                   Verification
@@ -141,7 +141,7 @@ const Otp = () => {
                 </Typography>
 
                 <Typography
-                  variant="body2"
+                  variant="body1"
                   sx={{
                     marginTop: "27px",
                     fontWeight: "400",
@@ -157,7 +157,7 @@ const Otp = () => {
                     name="email"
                     sx={{
                       marginTop: "7px",
-                      fontWeight: "600",
+                      fontWeight: "500",
                       textAlign: "left",
                       color: "#06b6d4",
                       fontSize: "16px",
