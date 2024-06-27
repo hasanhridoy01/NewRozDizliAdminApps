@@ -91,6 +91,11 @@ const Otp = () => {
     // }
   };
 
+  //handleNavigation......................!
+  const handleNavigation = () => {
+    navigate(-1);
+  }
+
   return (
     <>
       <Container>
@@ -124,6 +129,7 @@ const Otp = () => {
                   variant="h6"
                   gutterBottom
                   style={{ display: "flex", alignItems: "center", cursor: 'pointer' }}
+                  onClick={handleNavigation}
                 >
                   <ArrowBackIcon style={{ marginRight: "8px" }} />
                   Verification
