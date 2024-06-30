@@ -12,6 +12,8 @@ import { useNavigate } from "react-router-dom";
 import LockClockOutlinedIcon from "@mui/icons-material/LockClockOutlined";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Registration = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -19,12 +21,12 @@ const Registration = () => {
   const [password, setPassword] = useState("");
   const [resetPassword, setResetPassword] = useState("");
   const navigate = useNavigate();
-  
+
   //showPassword toggle................!
   const handleTogglePasswordVisibility = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
   };
-  
+
   //showPassword toggle................!
   const handleTogglePasswordVisibilityTwo = () => {
     setShowPasswordTwo((prevShowPasswordTwo) => !prevShowPasswordTwo);
@@ -42,26 +44,28 @@ const Registration = () => {
 
     if (password === resetPassword) {
       if (password.length < 8) {
-        alert("Your password must be at least 8 characters long.");
+        toast.error("Your password must be at least 8 characters long.");
       } else if (!specialCharacterRegex.test(password)) {
-        alert(
+        toast.error(
           "Your password must include at least one special character (e.g., !, @, #)."
         );
       } else if (!containsUppercase) {
-        alert(
+        toast.error(
           "Your password must include at least one uppercase letter (e.g., A, B, C)."
         );
       } else if (!containsLowercase) {
-        alert(
+        toast.error(
           "Your password must include at least one lowercase letter (e.g., a, b, c)."
         );
       } else if (!containsNumber) {
-        alert("Your password must include at least one number (e.g., 1, 2, 3).");
+        toast.error(
+          "Your password must include at least one number (e.g., 1, 2, 3)."
+        );
       } else {
         navigate("/");
       }
     } else {
-      alert("Passwords do not match");
+      toast.error("Passwords do not match");
     }
   };
 
@@ -75,6 +79,7 @@ const Registration = () => {
 
   return (
     <Container>
+      <ToastContainer />
       <div
         className=""
         style={{
@@ -87,7 +92,7 @@ const Registration = () => {
       >
         <Card
           sx={{
-            height: "450px",
+            height: "470px",
             width: "390px",
             padding: "50px",
             borderRadius: "15px",

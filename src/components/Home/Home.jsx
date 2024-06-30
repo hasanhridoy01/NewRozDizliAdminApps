@@ -14,6 +14,8 @@ import LockClockOutlinedIcon from "@mui/icons-material/LockClockOutlined";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import { useState } from "react";
 import { Form, useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Home = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -34,11 +36,11 @@ const Home = () => {
 
     //form validation.....................!
     if (!email) {
-      alert("please insert a email");
+      toast.error("please insert a email");
     } else if (!password) {
-      alert("please enter a password");
+      toast.error("please enter a password");
     } else {
-      alert();
+      toast.message();
       //form reset for user...............!
       document.getElementById("FormId").reset();
     }
@@ -55,6 +57,7 @@ const Home = () => {
   return (
     <>
       <Container>
+      <ToastContainer />
         <div
           className=""
           style={{
