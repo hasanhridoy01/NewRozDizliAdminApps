@@ -18,13 +18,14 @@ const Registration = () => {
   const [showPasswordTwo, setShowPasswordTwo] = useState(false);
   const [password, setPassword] = useState("");
   const [resetPassword, setResetPassword] = useState("");
-
   const navigate = useNavigate();
-
+  
+  //showPassword toggle................!
   const handleTogglePasswordVisibility = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
   };
-
+  
+  //showPassword toggle................!
   const handleTogglePasswordVisibilityTwo = () => {
     setShowPasswordTwo((prevShowPasswordTwo) => !prevShowPasswordTwo);
   };
@@ -33,6 +34,7 @@ const Registration = () => {
   const handleForm = (e) => {
     e.preventDefault();
 
+    //password validation.......................!
     const specialCharacterRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
     const containsUppercase = /[A-Z]/.test(password);
     const containsLowercase = /[a-z]/.test(password);
