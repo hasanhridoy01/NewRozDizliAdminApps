@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Button,
   Card,
@@ -29,6 +29,7 @@ const Registration = () => {
     setShowPasswordTwo((prevShowPasswordTwo) => !prevShowPasswordTwo);
   };
 
+  //form submit..........................!
   const handleForm = (e) => {
     e.preventDefault();
 
@@ -62,10 +63,12 @@ const Registration = () => {
     }
   };
 
+  //navigate to back page.................!
   const handleClick = () => {
     navigate(-1);
   };
 
+  //disable to button page...............!
   const isButtonDisabled = !password || !resetPassword;
 
   return (
